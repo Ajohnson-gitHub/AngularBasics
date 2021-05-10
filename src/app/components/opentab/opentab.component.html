@@ -1,0 +1,20 @@
+<p>User Name</p>
+<input typer="text" class="form-control" [(ngModel)]="userName" />
+<!--p>{{ userName }}</p>-->
+
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewName"
+  (click)="onCreateName()"
+>
+  Submit
+</button>
+<button
+  class="btn btn-primary"
+  [disabled]="userName === ''"
+  (click)="userName = ''"
+>
+  Reset User
+</button>
+
+<p>{{ nameCreationStatus }}</p>
